@@ -1,0 +1,29 @@
+extends partials/layout
+
+block vars
+  - var title = "test"
+  - var bodyClass = "test-page"
+
+block content
+
+  section.test-block
+    .custom-select-wrapper
+      .custom-select
+        .custom-select__trigger
+          span Tesla
+          .arrow
+        .custom-options
+          span.custom-option.selected(data-value='tesla') Tesla
+          span.custom-option(data-value='volvo') Volvo
+          span.custom-option(data-value='mercedes') Mercedes
+
+    .box-perspective
+
+      #container-perspective.container-perspective
+        #container-perspective_inner.container-perspective_inner
+
+      #container-perspective.container-perspective
+      #container-perspective_inner.container-perspective_inner
+
+      #container-perspective.container-perspective
+      #container-perspective_inner.container-perspective_inner

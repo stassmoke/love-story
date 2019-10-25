@@ -1,0 +1,79 @@
+.navigation
+  // background-color: $purple
+  padding: 1.6rem 0
+  z-index: 1
+  position: relative
+
+  &-logo
+    display: flex
+
+    align-items: center
+    &-icon
+      margin-right: 1rem
+
+    span
+      font-family: $ubuntu
+      font-size: 2.9rem 
+      color: #fff
+      letter-spacing: -0.54px
+
+      &.text-orange 
+        letter-spacing: -0.54px
+
+  &-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &-links
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-right: 5rem
+
+  &-link
+    a
+      transition: $transition
+      color: $grey
+
+    &:hover
+      a
+        color: #fff
+
+    &:nth-child(odd)
+      margin-right: 2.2rem
+
+    &:nth-child(even)
+      margin-right: 3rem
+
+    &:last-child
+      margin-right: 0
+    
+
+    &.__active
+      a
+        color: #fff
+        font-weight: 900
+
+  &-search
+    cursor: pointer
+    margin-right: 1.5rem
+
+  .navigation-language
+    margin-right: 1.5rem
+
+  &-wrap__mobile
+    display: flex
+    align-items: center
+
+.navigation-wrap__mobile
+
+  @media screen and (max-width: 1240px)
+    display: none
+
+.navigation-burger__mobile
+  display: none
+
+  @media screen and (max-width: 1240px)
+    display: inline-block
+

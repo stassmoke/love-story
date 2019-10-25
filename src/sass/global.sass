@@ -1,0 +1,118 @@
+*
+  box-sizing: border-box
+
+html
+  font-size: 10px
+  font-family: $lato
+
+
+body
+  font: $lato
+  margin: 0
+  font-smoothing: antialiased
+  tap-highlight-color: transparent
+  color: #fff
+
+
+section
+a
+  border: none
+  outline: none
+  text-decoration: none
+  color: #fff
+
+p
+  font-size: 2rem
+  line-height: 2.5rem
+
+span
+
+img
+  border: none
+  outline: none
+  max-width: 100%
+  vertical-align: middle
+
+ul
+  padding: 0
+
+  li
+    list-style: none
+
+  &.list-inline
+    & > li
+      display: inline-block
+
+h1, h2, h3, h4, h5, h6
+  &:first-child
+    margin-top: 0
+
+h1
+h2
+h3
+h4
+h5
+h6
+
+
+label
+  border-radius: 0
+
+button, input, select, textarea, a
+  font: $font
+  font-size: 1.6rem
+
+.header-logo
+  display: block
+  svg
+    background-color: red
+
+//	SELECT
+select
+  appearance: none
+
+  &:-moz-focusring
+    color: transparent
+    text-shadow: none
+//	END SELECT
+
+// INPUTS & TEXTAREA
+input,
+textarea
+  font: $font
+  font-size: 1.6rem
+
+  &::placeholder
+    font: $font
+    font-size: 1.6rem
+
+textarea
+
+input
+  appearance: none
+
+input[type='number']
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    -webkit-appearance: none
+  -moz-appearance: textfield
+//	END INPUTS & TEXTAREA
+
+
+
+.container
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  padding: 0 15px
+
+  @media screen and (max-width: 992px) 
+    max-width: 960px
+
+  @media screen and (max-width: 768px)
+    max-width: 720px
+
+  @media screen and (max-width: 575px)
+    max-width: 540px
+
+.text-orange
+  color: $orange !important

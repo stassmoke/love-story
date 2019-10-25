@@ -1,0 +1,380 @@
+// BUTTONS
+button, .btn, input[type="button"]
+  border: none
+  background: none
+  cursor: pointer
+  display: inline-block
+  padding: 0.6em 1.2em
+  line-height: 1em
+  transition: background 100ms
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+  &.focus, &:focus, &:hover, &:active
+    text-decoration: none
+
+  &:active, &:focus
+    outline: none
+// END BUTTONS
+
+// FORM
+.form-group
+  position: relative
+
+  &.error
+    .error-label
+      // display: block
+      opacity: 1
+      transition: opacity .3s
+
+  &.error
+    .input-line
+      background: #f41f52
+      width: 100%
+
+  .input-holder
+    &:after
+      background: #f41f52
+
+  .error-label
+    font-size: 1.3rem
+    font-weight: 400
+    line-height: 1.9rem
+    opacity: 0
+    position: absolute
+    right: 0
+    bottom: -2.1rem
+    transition: opacity .3s
+    // display: none
+// END FORM
+
+// CHECKBOX
+.checkbox input[type="checkbox"]
+  &:not(:checked), &:checked
+    left: -9999rem
+    position: absolute
+
+  &:not(:checked) + label, &:checked + label
+    cursor: pointer
+    position: relative
+    padding-left: 3.6rem
+
+  &:not(:checked) + label:before, &:checked + label:before
+    background: #eee
+    content: ''
+    border: 1px solid #383838
+    left: 0
+    top: 0.2rem
+    position: absolute
+    width: 1.7rem
+    height: 1.7rem
+
+  &:not(:checked) + label:after, &:checked + label:after
+    border: 2px solid #000
+    border-left-color: transparent
+    border-top-color: transparent
+    content: ''
+    color: #000
+    position: absolute
+    top: 0.2rem
+    left: 0.7rem
+    font-size: 1.8rem
+    transition: all .2s
+    height: 0.10rem
+    width: 0.3rem
+
+  &:not(:checked) + label:after
+    opacity: 0
+    transform: rotate(-90deg) scale(0)
+
+  &:checked + label:after
+    opacity: 1
+    transform: rotate(40deg) scale(1)
+
+  &:disabled
+    &:not(:checked) + label:before
+      box-shadow: none
+      border-color: #bbb
+      background-color: #ddd
+
+    &:checked + label
+      &:before
+        box-shadow: none
+        border-color: #bbb
+        background-color: #ddd
+
+      &:after
+        color: #999
+
+    + label
+      color: #aaa
+
+  &:checked:focus + label:before, &:not(:checked):focus + label:before
+    border: 1px solid #777
+// END CHECKBOX
+
+// RADIO
+.radio input[type="radio"]
+  &:not(:checked), &:checked
+    left: -9999rem
+    position: absolute
+
+  &:not(:checked) + label, &:checked + label
+    cursor: pointer
+    position: relative
+    padding-left: 3.9rem
+
+  &:not(:checked) + label:before, &:checked + label:before
+    //background: #eee
+    border-radius: 50%
+    border: 2px solid #000
+    content: ''
+    left: 0
+    top: 0.2rem
+    position: absolute
+    width: 1.8rem
+    height: 1.8rem
+
+  &:not(:checked) + label:after, &:checked + label:after
+    content: ''
+    background-color: #000
+    border-radius: 50%
+    position: absolute
+    top: 0.7rem
+    left: 0.5rem
+    width: 1.2rem
+    height: 1.2rem
+    transition: all .2s
+
+  &:not(:checked) + label:after
+    opacity: 0
+    transform: scale(0)
+
+  &:checked + label:after
+    opacity: 1
+    transform: scale(1)
+
+  &:disabled
+    &:not(:checked) + label:before
+      box-shadow: none
+      border-color: #bbb
+      background-color: #ddd
+
+    &:checked + label
+      &:before
+        box-shadow: none
+        border-color: #bbb
+        background-color: #ddd
+
+      &:after
+        color: #999
+
+    + label
+      color: #aaa
+  //&:checked:focus + label:before, &:not(:checked):focus + label:before
+    //border: 2px solid #777
+  //&:checked:focus + label:after, &:not(:checked):focus + label:after
+// END RADIO
+
+//	INPUT FILE
+.input-file
+  cursor: pointer
+  position: relative
+
+  label
+    cursor: pointer
+    display: block
+    transition: all .4s
+
+  input
+    cursor: pointer
+    display: inline-block
+    left: 0
+    opacity: 0.01
+    padding: 0
+    pointer-events: none
+    position: absolute
+    top: 0
+    //&:hover + label, &:focus + label
+//	END INPUT FILE
+
+// CUSTOM SELECT // 
+
+
+.custom-select-wrapper
+  position: relative
+  user-select: none
+  width: auto
+  max-width: 30rem
+
+.custom-select
+  display: flex
+  flex-direction: column
+  border-width: 0 2px 0 2px
+  border-style: solid
+  border-color: #394a6d
+  width: 100%
+
+.custom-select__trigger
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 22px
+  font-size: 20px
+  font-weight: 300
+  color: #3b3b3b
+  height: 60px
+  line-height: 60px
+  background: #ffffff
+  cursor: pointer
+  border-width: 2px 0 2px 0
+  border-style: solid
+  border-color: #394a6d
+
+.custom-options
+  position: absolute
+  display: block
+  top: 100%
+  left: 0
+  right: 0
+  border: 2px solid #394a6d
+  border-top: 0
+  background: #fff
+  transition: all 0.5s
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  z-index: 2
+
+.custom-select.open .custom-options
+  opacity: 1
+  visibility: visible
+  pointer-events: all
+
+.custom-option
+  position: relative
+  display: block
+  padding: 0 22px 0 22px
+  font-size: 22px
+  font-weight: 300
+  color: #3b3b3b
+  line-height: 60px
+  cursor: pointer
+  transition: all 0.5s
+
+  &:hover
+    cursor: pointer
+    background-color: #b2b2b2
+
+  &.selected
+    color: #ffffff
+    background-color: #305c91
+
+.arrow
+  position: relative
+  height: 15px
+  width: 15px
+
+  &::before, &::after
+    content: ""
+    position: absolute
+    bottom: 0px
+    width: 0.15rem
+    height: 100%
+    transition: all 0.5s
+
+  &::before
+    left: -5px
+    transform: rotate(45deg)
+    background-color: #394a6d
+
+  &::after
+    left: 5px
+    transform: rotate(-45deg)
+    background-color: #394a6d
+
+.open .arrow
+  &::before
+    left: -5px
+    transform: rotate(-45deg)
+
+  &::after
+    left: 5px
+    transform: rotate(45deg)
+
+// END CUSTOM SELECT // 
+
+
+// PERSPECTIVE BOX //
+
+.container-perspective
+  perspective: 25px
+  display: inline-block
+
+  &_inner
+    width: 25rem
+    height: 35rem
+    display: inline-block
+    background-color: white
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2)
+    transition: transform 0.5s
+    -webkit-transition: transform 0.5s
+    -moz-transition: transform 0.5s
+    -o-transition: transform 0.5s
+
+
+// END PERSPECTIVE BOX //
+
+// BUTTONS RESET //
+
+.btn
+  outline: none
+  background-color: $blue
+  transition: $transition
+  border-radius: 40px
+
+  &:hover
+    box-shadow: 0px 0px 13px -1px rgba(0,0,0,0.55) 
+
+  span
+    color: #fff 
+    
+// END BUTTONS RESET //
+
+//  BUTTON LOGIN //
+
+.btn-login
+  
+  background-color: $blue
+  padding: 1rem 3rem
+
+  span
+    font-size: 1.9rem
+    letter-spacing: 0.2px
+
+// END BUTTON LOGIN //
+
+// BUTTON ICON //
+
+.btn-icon
+  padding: 1.6rem 3rem 
+  display: inline-flex
+  align-items: center
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12)
+  font-size: 2.7rem
+
+  &__fzn
+    font-weight: 500
+    margin-right: 0.6rem
+
+  &__fzb
+    font-weight: 900
+    margin-right: 0.6rem
+
+  svg
+    margin-top: -0.5rem
+
+// END BUTTON ICON //
+
