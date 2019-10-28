@@ -1,6 +1,6 @@
-import test from './test';
+import slider from './slider';
 
-test();
+slider();
 
 "use strict";
 

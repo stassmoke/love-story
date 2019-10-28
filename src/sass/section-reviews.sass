@@ -1,0 +1,286 @@
+.section-reviews
+    padding: 10% 0
+
+    .slider-wrap
+        position: relative
+        // overflow: hidden
+        height: 44.8rem
+        width: 100%
+
+        @media screen and ( max-width: 985px )
+            width: 85%
+            margin: 0 auto
+
+        @media screen and ( max-width: 830px )
+            width: 80%
+
+    .slider-container
+        width: 100%
+        height: auto
+        position: relative
+        // overflow: hidden
+
+        .item
+            position: absolute
+            opacity: 0
+            transition: opacity 1s
+            z-index: 1
+            width: 100%
+            // visibility: hidden
+
+            &.active
+                opacity: 1
+                visibility: visible
+
+        .slider-number
+            position: absolute
+            left: 10px
+            top: 10px
+            background: black
+            color: white
+            padding: 5px 10px
+            font-size: 20px
+            z-index: 2
+            border-radius: 6px
+
+    .slider-controls
+        position: absolute
+        bottom: 0
+        width: 100%
+        left: 0
+        height: 100%
+        z-index: 1
+        pointer-events: none
+
+
+    .prev, .next
+        color: white
+        text-align: center
+        cursor: pointer
+        user-select: none
+        width: 3.2rem   
+        display: inline-block
+        height: 5.4rem  
+        background-size: cover
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-repeat: no-repeat
+        pointer-events: all
+
+        @media screen and ( max-width: 830px )
+            top: 6rem
+            transform: translateY(0)
+
+    .prev
+        left: -5%
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='54' viewBox='0 0 32 54'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23a0a0a0' d='M27.56 53.996l3.878-4.184L8.565 27.52C16.596 19.718 24.29 12.245 32 4.753L27.382.003.001 26.911l27.558 27.085z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+        
+        @media screen and ( max-width: 1270px )
+            left: -3%
+
+        @media screen and ( max-width: 1215px )
+            left: 1%
+
+        @media screen and ( max-width: 985px )
+            left: -8%
+
+        @media screen and ( max-width: 830px )
+            left: -12%
+
+        
+            
+
+    .next
+        right: -5%
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='54' viewBox='0 0 32 54'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23a0a0a0' d='M4.44 53.996L.563 49.812 23.435 27.52C15.404 19.718 7.71 12.245 0 4.753L4.618.003l27.381 26.908L4.441 53.996z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+        
+        @media screen and ( max-width: 1270px )
+            right: -3%
+
+        @media screen and ( max-width: 1215px )
+            right: 1%
+
+        @media screen and ( max-width: 985px )
+            right: -8%
+
+        @media screen and ( max-width: 830px )
+            right: -12%
+        
+
+
+
+    .prev.disabled, .next.disabled
+        cursor: no-drop
+
+    .indicators
+        float: left
+        width: 60%
+        user-select: none
+
+        ul
+            list-style: none
+            margin: 0
+            text-align: center
+
+        li
+            display: inline-block
+            background-color: #ebebeb
+            color: #434343
+            font-weight: bold
+            height: 28px
+            width: 28px
+            border-radius: 4px
+            margin: 0 2px
+            line-height: 28px
+            cursor: pointer
+
+            &.active
+                background-color: #15525c
+                color: white
+
+
+    .slider-container
+
+        .item
+            display: flex
+            align-items: center
+
+            @media screen and ( max-width: 830px )
+                flex-direction: column-reverse
+
+
+    .slider-left__side  
+        display: flex
+        flex-direction: column
+        flex: 1 1 61.8%
+        padding-left: 6%
+
+    .review-first,
+    .review-second
+        position: relative
+        margin-bottom: 3.4rem
+
+        .rewiev-name 
+            color: $purple
+            text-transform: uppercase
+            font-size: 1.8rem
+            font-weight: 900
+            margin-right: 0.5rem
+
+        .rewiev-text
+            font-size: 1.8rem
+            color: #5d5d5d
+            font-weight: 400
+
+            @media screen and ( max-width: 1270px )
+                font-size: 1.4rem
+
+
+        &::before
+            content: ''
+            background-image: url('/img/icons/“.svg')
+            width: 4.5rem
+            height: 4rem
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            position: absolute
+            left: -5.9rem
+            top: -1.4rem
+
+            @media screen and ( max-width: 550px )
+                width: 2.2em
+                height: 2rem
+                left: -3.9rem
+                top: -0.4rem
+
+
+    .review-second
+        padding-left: 12%
+
+        @media screen and ( max-width: 985px )
+            padding-left: 16%
+
+        .rewiev-name 
+            color: $orange
+
+        &::before
+            background-image: url('/img/icons/“.svg')
+            left: .5rem 
+
+            @media screen and ( max-width: 550px )
+                left: 1.9rem
+
+        
+
+
+    .slider-right__side  
+        flex: 1 1 48.2%
+        padding-left: 2%
+        text-align: center
+
+        @media screen and ( max-width: 985px )
+            align-self: flex-start
+        
+        @media screen and ( max-width: 830px )
+            margin-bottom: 3rem
+            align-self: center
+            padding: 0
+
+
+
+        .img-holder
+            max-width: 39.2rem  
+            margin: 0 auto
+            height: 100%
+            width: 100%
+            border-radius: 50%
+            overflow: hidden
+
+            @media screen and ( max-width: 1270px )
+                max-width: 30rem
+
+            @media screen and ( max-width: 985px )
+                max-width: 16rem
+            
+
+
+
+    .slider-title
+        font-size: 3.1rem
+        font-weight: 700
+        text-transform: uppercase
+        color: $orange
+        line-height: 1
+        position: relative
+        width: 100%
+
+        &::before,
+        &::after
+            content: ''
+            width: 10.6rem
+            height: 2px
+            background-color: $orange
+            display: inline-block
+            vertical-align: middle
+            margin-bottom: .8rem
+
+            @media screen and ( max-width: 550px )
+                width: 10%
+
+
+        &::before
+            margin-right: 2rem
+
+        &::after
+            margin-left: 2rem
+
+    .section-title 
+
+        h2
+            margin-bottom: 3rem
+
+
+
+            

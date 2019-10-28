@@ -1,0 +1,134 @@
+.section-works
+    background-color: $purple
+    padding: 5% 0
+
+    &__steps
+        display: flex
+        justify-content: space-between
+        margin-bottom: 6.4rem
+
+        @media screen and ( max-width: 980px )
+            flex-direction: column
+            align-items: center
+
+
+    .step
+        width: 30rem
+        position: relative
+        z-index: 3
+
+        @media screen and ( max-width: 980px )
+            margin-bottom: 5rem
+
+        &::before
+            content: ''
+            width: 100%
+            height: 5px
+            position: absolute
+            bottom: 0
+            left: 0
+            box-shadow: 1px 9px 11px 0px black
+            border-radius: 50%
+            z-index: -1
+
+        &-head
+            height: 18.8rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 2.5rem 2.3rem 2rem 2.9rem 
+            background: linear-gradient(to bottom, #7b2671 0%,#5b1957 100%)
+            border-radius: 50px 50px 0 0 
+            position: relative
+            z-index: 10
+
+            // &::before,
+            // &::after
+            //    content: '' 
+            //    width: 15px
+            //    background-color: #000
+            //    position: absolute
+            //    bottom: -4px
+            //    height: 10px
+            //    display: inline-block
+            //    z-index: -1
+
+            // &::before
+            //     left: 0
+            //     transform: rotate(35deg)
+
+            // &::after
+            //     right: 1px
+
+            //     transform: rotate(-35deg)
+
+        &-body
+            height: 21rem
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.15)
+            background-color: #fff
+            display: flex
+            align-items: center
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.15)
+            border: 6px solid rgba(155, 68, 127, 0.08)
+            border-radius: 0 0 50px 50px
+            margin: 0 1.2rem 0 .9rem 
+            z-index: 10
+            position: relative
+
+        .img-holder
+            margin: 0 auto
+
+            &.__type-1
+                max-width: 19rem
+
+            &.__type-2
+                max-width: 22.8rem
+
+            &.__type-3
+                max-width: 24.8rem  
+
+    .count-number
+        font-size: 4rem
+        font-family: $ubuntu
+        color: #eee3d4
+        letter-spacing: -0.14px
+        text-transform: uppercase
+        margin-right: 0.3rem
+        font-weight: 300
+        display: inline-block
+        vertical-align: middle
+        line-height: 1
+
+    .count-step 
+        font-size: 1.8rem
+        color: #eee3d4
+        font-family: $ubuntu
+        letter-spacing: -0.14px
+        display: inline-block
+        vertical-align: middle
+        line-height: 1
+
+    .step-head
+
+        &-count 
+            margin-bottom: 1.7rem
+
+        &-title
+            text-transform: uppercase
+            color: #fff
+            font-size: 2.5rem
+            font-weight: 900
+            font-family: $lato
+            margin-bottom: 1rem
+
+        &-text
+            font-size: 1.4rem
+            font-weight: 500
+            color: #fff
+            text-align: center
+
+
+
+    .wrap-btn__center
+        text-align: center
+    

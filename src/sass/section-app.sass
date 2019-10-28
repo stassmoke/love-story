@@ -1,0 +1,54 @@
+.section-app
+    padding: 10% 0 7rem 0
+    position: relative
+
+    &__bg
+        position: absolute
+        right: -4%
+        left: 45%
+        top: auto
+        bottom: -2%
+        width: 100%
+        height: auto
+        max-width: 45%
+        display: block
+
+        @media screen and (max-width: 750px)
+            display: none
+
+    &__content
+        display: flex
+        flex-direction: column
+        max-width: 47rem
+
+        @media screen and (max-width: 750px)
+            align-items: center
+
+    &__title
+        font-size: 3.4rem
+        font-weight: 900
+        color: $purple
+        margin-bottom: 2rem
+
+        @media screen and (min-width: 750px) and ( max-width: 1270px )
+            font-size: 2.2vw
+
+        @media screen and (max-width: 750px)
+            text-align: center
+
+
+    &__download 
+        color: $blue
+        font-size: 3rem
+        font-weight: 900
+        margin-bottom: 3rem
+        max-width: 35rem   
+
+        @media screen and (min-width: 750px) and ( max-width: 1270px )
+            font-size: 2vw
+
+        @media screen and (max-width: 750px)
+            text-align: center
+
+    &__apple
+        margin-bottom: 1.2rem

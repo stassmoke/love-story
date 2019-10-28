@@ -209,29 +209,26 @@ button, .btn, input[type="button"]
   max-width: 30rem
 
 .custom-select
-  display: flex
+  display: inline-flex
   flex-direction: column
-  border-width: 0 2px 0 2px
-  border-style: solid
-  border-color: #394a6d
-  width: 100%
+  width: auto
 
 .custom-select__trigger
   position: relative
   display: flex
   align-items: center
   justify-content: space-between
-  padding: 0 22px
-  font-size: 20px
-  font-weight: 300
-  color: #3b3b3b
-  height: 60px
-  line-height: 60px
+  padding: 0 4.7rem 0 1.8rem
+  font-size: 1.8rem
+  font-weight: 700
+  border-radius: 5px
+  color: #4d4d4d
+  font-family: $lato
+  height: 3.8rem
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), inset 0 1px 1px #ffffff
   background: #ffffff
   cursor: pointer
-  border-width: 2px 0 2px 0
-  border-style: solid
-  border-color: #394a6d
+  border: 1px solid #994186
 
 .custom-options
   position: absolute
@@ -239,7 +236,7 @@ button, .btn, input[type="button"]
   top: 100%
   left: 0
   right: 0
-  border: 2px solid #394a6d
+  border-bottom: 2px solid #394a6d
   border-top: 0
   background: #fff
   transition: all 0.5s
@@ -247,6 +244,13 @@ button, .btn, input[type="button"]
   visibility: hidden
   pointer-events: none
   z-index: 2
+
+  &:last-of-type
+    border: none
+    border-radius: 0 0 5px 5px
+
+.custom-select.open .custom-select__trigger
+  border-radius: 5px 5px 0 0 
 
 .custom-select.open .custom-options
   opacity: 1
@@ -256,53 +260,47 @@ button, .btn, input[type="button"]
 .custom-option
   position: relative
   display: block
-  padding: 0 22px 0 22px
-  font-size: 22px
-  font-weight: 300
+  padding: 1.2rem 2rem
+  font-size: 1.8rem
+  font-weight: 700
   color: #3b3b3b
-  line-height: 60px
+  line-height: 1
   cursor: pointer
   transition: all 0.5s
+  text-overflow: ellipsis
+  overflow: hidden
 
   &:hover
     cursor: pointer
-    background-color: #b2b2b2
+    background-color: $purple
+    color: #fff
 
   &.selected
     color: #ffffff
-    background-color: #305c91
+    background-color: $purple
 
 .arrow
-  position: relative
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: 0.9rem 
   height: 15px
   width: 15px
 
-  &::before, &::after
+  &::before
     content: ""
     position: absolute
     bottom: 0px
-    width: 0.15rem
-    height: 100%
     transition: all 0.5s
+    border: 5px solid transparent
+    border-top: 5px solid #626262
+    transform-origin: center 2.8px
 
-  &::before
-    left: -5px
-    transform: rotate(45deg)
-    background-color: #394a6d
-
-  &::after
-    left: 5px
-    transform: rotate(-45deg)
-    background-color: #394a6d
 
 .open .arrow
   &::before
-    left: -5px
-    transform: rotate(-45deg)
+    transform: rotate(-180deg)
 
-  &::after
-    left: 5px
-    transform: rotate(45deg)
 
 // END CUSTOM SELECT // 
 
@@ -378,3 +376,25 @@ button, .btn, input[type="button"]
 
 // END BUTTON ICON //
 
+// INPUT CUSTOM //
+
+.input
+  border: 3px solid rgba(141, 54, 124, 0.12)
+  background-color: #ffffff
+  box-shadow: inset 0 1px 0 #ffffff
+  height: 3.9rem
+  border-radius: 50px
+  width: 100%
+  padding: 0 1.9rem 
+  line-height: 1.4
+  color: $purple
+  outline: none
+
+  &::placeholder
+    line-height: 1.4
+    color: $purple
+    opacity: 0.63
+    font-weight: 700
+
+
+// END INPUT CUSTOM //

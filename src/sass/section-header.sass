@@ -2,6 +2,11 @@
   height: 734px
   position: relative
 
+  @media screen and ( max-width: 450px )
+    height: auto
+    padding: 0 0 10% 0
+
+
   &-bg-purple
     width: 100%
     height: 100%
@@ -10,15 +15,33 @@
     left: 0
     z-index: -1
 
+    @media screen and ( max-width: 1024px )
+      background-color: $purple
+
+
   &-section
     display: flex
 
+    @media screen and ( max-width: 1024px )
+      flex-direction: column
+      
+
     &_left
       flex: 1 1 42.5%
-      padding-right: 3vw
+      padding: 7rem 3vw 0 0
+
+      @media screen and ( max-width: 1024px )
+        padding: 10% 0 0 0 
+        flex: 1 1 100%
+        text-align: center
+        
 
     &_right
       flex: 1 1 57.5%
+
+      @media screen and ( max-width: 1024px )
+        display: none
+
 
 
   &-section_title
@@ -63,12 +86,18 @@
     position: relative
     padding-left: 1.7rem
     margin-bottom: 3.3rem
-    
-    &:before
-      content: '*'
-      position: absolute
-      left: 0
-      top: 0
+    display: inline-block
+
+    span
+      &:first-of-type
+        position: relative
+
+        &:before
+          content: '*'
+          position: absolute
+          left: -1.7rem
+          top: 0
+          line-height: 1
 
     &__fn
       font-weight: 400
