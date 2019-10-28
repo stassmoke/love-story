@@ -1,5 +1,10 @@
 header.header
-  img.header-bg-purple(src="/img/header-bg-purple.png", alt="")
+  .header-bg-purple
+    img(src="/img/header-bg-purple.png", alt="")
+
+  .header-bg-foto
+    img(src="/img/image_couple.jpg", alt="")
+
 
   nav.navigation.header-navigation
 
@@ -13,7 +18,43 @@ header.header
             span.text-orange Date 
             | Love Story
         
-        .navigation-wrap__mobile
+        #navigation-wrap__mobile.navigation-wrap__mobile
+          #close-nav.close-nav 
+            <?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve"><g><path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              <g>
+              </g>
+              </svg>
+
+
           ul.navigation-links
 
             li.navigation-link
@@ -22,7 +63,7 @@ header.header
             li.navigation-link
               a(href="#") Our services
 
-            li.navigation-link.__active
+            li.navigation-link
               a(href="#") Why Us?
 
             li.navigation-link
@@ -30,16 +71,26 @@ header.header
 
             li.navigation-link
               a(href="#") How It Works?
-          
-          .navigation-search
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22"><g><g><image width="22" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAB40lEQVRIS63VS6hPURTH8c+NwsBACRPuQKKEIq+B4S2PEGFiYqDkVRJFuB4hieQVEwYGDHCLgSgmlIGMEIqilPIYGHhO0NLet+M4////nLJnZ6/f+u611/7tfbpUj6VYhBkYjW94jDu4hFct8vqnu0qC6TiLqR0S92JPO00RvAyXk/gDTuEe3mIwJmF52knIbmJeK3gGR9KjJLqAtfjaImkxrmBgKmRFlS6DX6MbF7GyU/8wDQ+Tbi5ulXMCvAR9eI+RNaBZsh0H8RLjqsBXES7YgqMNwAPwBYMwEU+LuVHxO4zAlEKf6/KvYyFW41wZ/CtNjEqL1IWGLna4GdGWQ2XwT0TlY/CmCRWnsS7Bj5XBYbOwWw9uNwQ/Sf1dgBtl8GFsbefJFotNwLMUG4rPZfDYZJmYn4kHNau+izk4jk1Vdou5E9iIT5iN5x3gcd3XJ/2wdjcvYlFpPEJxmLHIeXwvJUV8N6KnMeLV21Xl/+IjFHf/GuanpKg+DjOcMiRd4wDHCIsWc/elBfvrKD+bEViFbRhfscUAnkmeXYMdBc0B7MzfVeAcm4XJGI4feIH7+FiA5bPJU/tTa/7aTk0z/CPLlyQH/rSlXcVNFsouyTm9/wscwJPYUKfHTSrO2iOIP0rfb0NgWSM+IkZtAAAAAElFTkSuQmCC"/></g></g></svg>
 
-          .navigation-language eng
 
-          a.btn.btn-login(href='#') 
-            span Login
+          .wrap-buttons-nav
+            .navigation-search
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17s-17-7.626-17-17S14.61,6,23.984,6z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g> <g></g><g></g><g> </g></svg>
 
-        .navigation-burger__mobile
+            .navigation-language
+              .custom-select-wrapper
+                .custom-select
+                    .custom-select__trigger
+                        span EN
+                        .arrow
+                    .custom-options
+                        span.custom-option.selected(data-value='EN') EN
+                        span.custom-option(data-value='RU') RU
+
+            a.btn.btn-login(href='#') 
+              span Login
+
+        #navigation-burger__mobile.navigation-burger__mobile
           <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
 
   .container
@@ -58,10 +109,11 @@ header.header
           span.header-section_subtitle__fn and 
           span.header-section_subtitle__fb 25 Free Credits
 
-        a(href='#').btn.btn-icon 
-          span.btn-icon__fzn Click to Join 
-          span.btn-icon__fzb FREE!
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="41" viewBox="0 0 27 41"><g><g><image width="27" height="41" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAApCAYAAADEZlLzAAAErklEQVRYR7WYeaiVVRTFf0ubR5uLKDAiU4uSJqiobI4iNTWaJCOKRqKiLEuCaKDxj8hKkoo0ocGpQiqlCVKJJormMhvM5jQxK8oV63k+ue9673vfe9GBC+9+95y9zl57WPt7ouayvQcwG5gs6a6axzptU91Dtk8HpgEvSTqy7rnGfT0BGwbMAp6UdOp/BrN9D7AXMFrSz40GGzybJ+mYZjDbk4G9gZMk/djqMp08s/06cADwJbBfI6DtIcCLwAOSrm26yETgovKsv6TFdcC2AF4ADgJ+AA6X9FE7ymznsg8C55Y9QyW93G7/OjErBt4C9gVGSZqew7Z3BHYG+koKA3nWB/inDlD2tEwQ2+sDB0p6rRgdD9wAbFAMfwqMlTTf9j5AH0lvd5c03Waj7THAo20M7Srp6+5Aqt/rgC0C+gMrgeuBAcAFxcAtkq6rDWY72ZdPRWuMPy9pte31SqJsBTwj6eRC6ypgo3gs6ezybGASKpSW8CTBZkv6a61ntt3iZh302E6MvgJ2AKZLGmV743KBzZKJks4vYMnaeN24ks2vNoKdVjwLpfl8A9wr6c+SKAFLJj4taZjtlMdSYBNgkqQOSm0fD6TYK89+AiZK+rVWzJrAZkkaYXvLAhYPc6lLa8esq401wHLzS/5PsH7At0A8+wVIfU2T9FB3oF2mfpNnMySNtB2wJSVmjfbTH+cBiyS92wq4t2DfARsC7wF7Auk4jWtG6TArGh/2Biw1F/o6asx2tO3xFp5EZj6Pt5ImVEXcJdW2k+ZJ/YrGbYCk9XmSJpdx4WNgbmlrkZ9BTUbnSjq2TrtKne3SAuxqSXfYHlp0brCkD2xfnJIA3gcS3yhF1thWEtMXuBI4ClgNHAykkCvPtgVC0ThJt9tOIUcD95f0pu0bgQmSZDtdJpQnpq80K3V+XFBGg2Z6K7Dtge+B2yRdY/s44Dng0EiS7buBywNWOktkKhde0gw2CejodSUum5esy/cKLFn4RGlVc2yfAMyJQUkLbKfezklpSFplOxNZJrPf1oKVDh+XA5CAR6mTGF8U8A6wZndL3SVuUYrfbV8BXAgMlPS37UeAKMPKRrDwmqa5KTBf0iGFhmTZ0VXX765LtLhMhDcCvKKZxhTjiHJggKRPbI8utM2UdEovwKYCZ3aisXgxHJhZDN4qabztxOiPSI+klECPlu22YBHLKGxkZLGkjAPRqiTOMknjeoS05mwFtrxVnT2cAixGOzKspwCN+21PAc5ah8bixWEpwHLgfknVpNsrzLY0VtYa+mG6dr8MP71CWkNjlc1L2w2pd5aWFYwjJFWe9hjTdl5QtgYWtgPL20glgL1K+RKSM4DHyg1vbtv1bUeLdisbB0n6sKdu2c6kVnX93bsCOxF4tgDkFSjtJ/VWa9mOR/Esa6qkMd0p9VNA1Q/j2fB0la7QytyS8knXyFoG7JSL1hHPvD7lRTArWXkTMEXSZ031lHEhF4tSV/RnyxBJ7+SPOmBp0PkvQaSkcS1MlynvZxnP876QzlOtKPxISW9UD7oFqzbavizqHEpqBO0+4KpITuPe2mA5ZDvzfaapqPNgYLvCzvLMi2UWSal0orgC/BfSviD9nNeg/gAAAABJRU5ErkJggg=="/></g></g></svg>
+        .wrap-btn
+          a(href='#').btn.btn-icon 
+            span.btn-icon__fzn Click to Join 
+            span.btn-icon__fzb FREE!
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="41" viewBox="0 0 27 41"><g><g><image width="27" height="41" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAApCAYAAADEZlLzAAAErklEQVRYR7WYeaiVVRTFf0ubR5uLKDAiU4uSJqiobI4iNTWaJCOKRqKiLEuCaKDxj8hKkoo0ocGpQiqlCVKJJormMhvM5jQxK8oV63k+ue9673vfe9GBC+9+95y9zl57WPt7ouayvQcwG5gs6a6axzptU91Dtk8HpgEvSTqy7rnGfT0BGwbMAp6UdOp/BrN9D7AXMFrSz40GGzybJ+mYZjDbk4G9gZMk/djqMp08s/06cADwJbBfI6DtIcCLwAOSrm26yETgovKsv6TFdcC2AF4ADgJ+AA6X9FE7ymznsg8C55Y9QyW93G7/OjErBt4C9gVGSZqew7Z3BHYG+koKA3nWB/inDlD2tEwQ2+sDB0p6rRgdD9wAbFAMfwqMlTTf9j5AH0lvd5c03Waj7THAo20M7Srp6+5Aqt/rgC0C+gMrgeuBAcAFxcAtkq6rDWY72ZdPRWuMPy9pte31SqJsBTwj6eRC6ypgo3gs6ezybGASKpSW8CTBZkv6a61ntt3iZh302E6MvgJ2AKZLGmV743KBzZKJks4vYMnaeN24ks2vNoKdVjwLpfl8A9wr6c+SKAFLJj4taZjtlMdSYBNgkqQOSm0fD6TYK89+AiZK+rVWzJrAZkkaYXvLAhYPc6lLa8esq401wHLzS/5PsH7At0A8+wVIfU2T9FB3oF2mfpNnMySNtB2wJSVmjfbTH+cBiyS92wq4t2DfARsC7wF7Auk4jWtG6TArGh/2Biw1F/o6asx2tO3xFp5EZj6Pt5ImVEXcJdW2k+ZJ/YrGbYCk9XmSJpdx4WNgbmlrkZ9BTUbnSjq2TrtKne3SAuxqSXfYHlp0brCkD2xfnJIA3gcS3yhF1thWEtMXuBI4ClgNHAykkCvPtgVC0ThJt9tOIUcD95f0pu0bgQmSZDtdJpQnpq80K3V+XFBGg2Z6K7Dtge+B2yRdY/s44Dng0EiS7buBywNWOktkKhde0gw2CejodSUum5esy/cKLFn4RGlVc2yfAMyJQUkLbKfezklpSFplOxNZJrPf1oKVDh+XA5CAR6mTGF8U8A6wZndL3SVuUYrfbV8BXAgMlPS37UeAKMPKRrDwmqa5KTBf0iGFhmTZ0VXX765LtLhMhDcCvKKZxhTjiHJggKRPbI8utM2UdEovwKYCZ3aisXgxHJhZDN4qabztxOiPSI+klECPlu22YBHLKGxkZLGkjAPRqiTOMknjeoS05mwFtrxVnT2cAixGOzKspwCN+21PAc5ah8bixWEpwHLgfknVpNsrzLY0VtYa+mG6dr8MP71CWkNjlc1L2w2pd5aWFYwjJFWe9hjTdl5QtgYWtgPL20glgL1K+RKSM4DHyg1vbtv1bUeLdisbB0n6sKdu2c6kVnX93bsCOxF4tgDkFSjtJ/VWa9mOR/Esa6qkMd0p9VNA1Q/j2fB0la7QytyS8knXyFoG7JSL1hHPvD7lRTArWXkTMEXSZ031lHEhF4tSV/RnyxBJ7+SPOmBp0PkvQaSkcS1MlynvZxnP876QzlOtKPxISW9UD7oFqzbavizqHEpqBO0+4KpITuPe2mA5ZDvzfaapqPNgYLvCzvLMi2UWSal0orgC/BfSviD9nNeg/gAAAABJRU5ErkJggg=="/></g></g></svg>
 
       .header-section_right
         div 123

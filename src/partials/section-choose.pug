@@ -1,6 +1,6 @@
 section.section-choose
     //- img.section-choose__top--bg(src="/img/top-bg.png", alt="")
-    img.section-choose__center--bg(src="/img/center-bg.jpg", alt="")
+    //- img.section-choose__center--bg(src="/img/center-bg.jpg", alt="")
     //- img.section-choose__bottom--bg(src="/img/bottom-bg.png", alt="")
 
     .container
@@ -27,11 +27,22 @@ section.section-choose
             form.section-choose__right
                 .mobile-form
                     .form__row
+                        
                         .cutom-select__label I am:
                         .custom-select-wrapper
                             .custom-select
                                 .custom-select__trigger
                                     span Female
+                                    .arrow
+                                .custom-options
+                                    span.custom-option.selected(data-value='Male') Male
+                                    span.custom-option(data-value='Female') Female
+                    .form__row
+                        .cutom-select__label Looking for:
+                        .custom-select-wrapper
+                            .custom-select
+                                .custom-select__trigger
+                                    span Male
                                     .arrow
                                 .custom-options
                                     span.custom-option.selected(data-value='Male') Male
@@ -63,18 +74,7 @@ section.section-choose
                                     span.custom-option(data-value='40') 40
                                     span.custom-option(data-value='45') 45
 
-                    .form__row
-                        .cutom-select__label Looking for:
-                        .custom-select-wrapper
-                            .custom-select
-                                .custom-select__trigger
-                                    span Male
-                                    .arrow
-                                .custom-options
-                                    span.custom-option.selected(data-value='Male') Male
-                                    span.custom-option(data-value='Female') Female
-
-                    .form__row
+                    .form__row.mb-mobile
                         .cutom-select__label Country
                         .custom-select-wrapper
                             .custom-select
@@ -86,15 +86,11 @@ section.section-choose
                                     span.custom-option(data-value='1') 1
                                     span.custom-option(data-value='2') 2
 
-                    .form-row__column    
-                        .other-label E-mail:
+                    .form-row__column
+                        input.input(type="email", placeholder="E-mail:",  )
 
-                        input.input(type="email", placeholder="usermail@gmail.com")
-
-                    .form-row__column    
-                        .other-label Password:
-
-                        input.input(type="password", placeholder="********")
+                    .form-row__column
+                        input.input(type="password", placeholder="Password:")
 
 
                 .wrap-sides
@@ -170,7 +166,9 @@ section.section-choose
 
                             input.input(type="password", placeholder="********")
 
-                .section-choose__right--description By clicking on "Click to Join for free" you agree our Terms of Use and Privacy Policy including our Cookie Use and Disclaimers. Terms of Use&Privacy Policy
+                .wrap-terms
+                    input(type='checkbox' name='terms', required)#terms-chebox.section-choose__checkbox
+                    label(for="terms-chebox").section-choose__right--description  By clicking on "Click to Join for free" you agree our Terms of Use and Privacy Policy including our Cookie Use and Disclaimers. Terms of Use&Privacy Policy
 
                 button.btn.btn-icon 
                     span.btn-icon__fzn Click to Join 

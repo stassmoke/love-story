@@ -1,6 +1,5 @@
-import slider from './slider';
 
-slider();
+import slider from './slider';
 
 "use strict";
 
@@ -9,19 +8,17 @@ slider();
 for (const dropdown of document.querySelectorAll(".custom-select-wrapper")) {
   dropdown.addEventListener("click", function() {
     this.querySelector(".custom-select").classList.toggle("open");
+
   });
 }
 
 for (const option of document.querySelectorAll(".custom-option")) {
   option.addEventListener("click", function() {
+
     if (!this.classList.contains("selected")) {
-      this.parentNode
-        .querySelector(".custom-option.selected")
-        .classList.remove("selected");
+      this.parentNode.querySelector(".custom-option.selected").classList.remove("selected");
       this.classList.add("selected");
-      this.closest(".custom-select").querySelector(
-        ".custom-select__trigger span"
-      ).textContent = this.textContent;
+      this.closest(".custom-select").querySelector(".custom-select__trigger span").textContent = this.textContent;
     }
   });
 }
@@ -43,77 +40,26 @@ window.addEventListener("click", function(e) {
 
 // CUSTOM SELECT END //
 
-// PERSPECTIVE BOX //
+// NAVIGATION //
 
-(function() {
-  // Init
-  let container = document.getElementById("container-perspective");
-  let inner = document.getElementById("container-perspective_inner");
+const btnBurger = document.getElementById("navigation-burger__mobile");
 
-  console.log(container,inner )
+const navMenu = document.getElementById("navigation-wrap__mobile");
 
-  // Mouse
-  let mouse = { 
-    _x: 0,
-    _y: 0,
-    x: 0, 
-    y: 0,
-    updatePosition: function(event) {
-      let e = event || window.event;
-      this.x = e.clientX - this._x;
-      this.y = (e.clientY - this._y) * -1;
-    },
-    setOrigin: function(e) {
-      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-    },
-    show: function() {
-      return "(" + this.x + ", " + this.y + ")";
-    }
-  };
+const close = document.getElementById("close-nav");
 
-  mouse.setOrigin(container);
+btnBurger.addEventListener("click", function() {
+  navMenu.classList.add("__open");
+});
 
-  let counter = 0;
-  let updateRate = 10;
-  let isTimeToUpdate = function() {
-    return counter++ % updateRate === 0;
-  };
+close.addEventListener("click", function() {
+  navMenu.classList.remove("__open");
+});
 
-  let onMouseEnterHandler = function(event) {
-    update(event);
-  };
+console.log(btnBurger, navMenu)
 
-  let onMouseLeaveHandler = function() {
-    inner.style = "";
-  };
+// NAVIGATION END //
 
-  let onMouseMoveHandler = function(event) {
-    if (isTimeToUpdate()) {
-      update(event);
-    }
-  };
 
-  let update = function(event) {
-    mouse.updatePosition(event);
-    updateTransformStyle(
-      (mouse.y / inner.offsetHeight / 2).toFixed(2),
-      (mouse.x / inner.offsetWidth / 2).toFixed(2)
-    );
-  };
 
-  let updateTransformStyle = function(x, y) {
-    let style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-    inner.style.transform = style;
-    inner.style.webkitTransform = style;
-    inner.style.mozTransform = style;
-    inner.style.msTransform = style;
-    inner.style.oTransform = style;
-  };
-
-  container.onmouseenter = onMouseEnterHandler;
-  container.onmouseleave = onMouseLeaveHandler;
-  container.onmousemove = onMouseMoveHandler;
-})();
-
-// PERSPECTIVE BOX END //
+slider();
