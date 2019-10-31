@@ -3,6 +3,13 @@ section.section-choose
     //- img.section-choose__center--bg(src="/img/center-bg.jpg", alt="")
     //- img.section-choose__bottom--bg(src="/img/bottom-bg.png", alt="")
 
+    //- svg( width="100%" height="100" viewBox="0 0 1 1" xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+    //-     clippath#wave
+    //-         path(d="M365.932,268.971c-5.68-0.656-10.569-2.522-13.758-7.927c-3.151-5.34-8.206-8.296-14.374-9.318c-4.298-0.712-8.622-0.772-12.954-0.772c-46.232-0.004-92.462-0.02-138.694,0.026c-4.056,0.004-8.13,0.22-12.16,0.664c-5.582,0.614-10.3,3.072-13.842,7.534c-0.93,1.172-1.796,2.402-2.604,3.662c-0.96,1.496-2.158,2.746-3.744,3.512c-1.49,0.721-3.038,1.371-4.626,1.822c-4.208,1.202-8.538,1.242-12.882,1.24C90.93,269.393,45.564,269.4,0.2,269.4c0-6.941-0.2,142.433-0.2,142.433h512V269.4c-45.731,0-91.463,0.008-137.194-0.017C371.846,269.382,368.868,269.311,365.932,268.971z")
+
+    //- svg(  xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve')
+    //-     clippath#wave(clippathunits='objectBoundingBox')
+    //-         path.st0(d="M 0.99218745,0.12109375 C 0.8431521,0.11621476 0.67583981,0.09123958 0.65853153,0.03513249 0.64683401,-0.00278656 0.33733112,-0.01199057 0.328125,0.0140625 0.30889866,0.06847251 0.3507812,0.11328125 0.0078125,0.115625 L 0,1 h 1 l -0.007813,-0.87890625")
     .container
 
         .section-title.__dark
@@ -35,8 +42,8 @@ section.section-choose
                                     span Female
                                     .arrow
                                 .custom-options
-                                    span.custom-option.selected(data-value='Male') Male
-                                    span.custom-option(data-value='Female') Female
+                                    span.custom-option(data-value='Male') Male
+                                    span.custom-option.selected(data-value='Female') Female
                     .form__row
                         .cutom-select__label Looking for:
                         .custom-select-wrapper
@@ -56,7 +63,7 @@ section.section-choose
                                     span 35
                                     .arrow
                                 .custom-options
-                                    span.custom-option.selected(data-value='25') 25
+                                    span.custom-option(data-value='25') 25
                                     span.custom-option(data-value='30') 30
                                     span.custom-option.selected(data-value='35') 35
                                     span.custom-option(data-value='40') 40
@@ -68,11 +75,11 @@ section.section-choose
                                     span 45
                                     .arrow
                                 .custom-options
-                                    span.custom-option.selected(data-value='25') 25
+                                    span.custom-option(data-value='25') 25
                                     span.custom-option(data-value='30') 30
-                                    span.custom-option.selected(data-value='35') 35
+                                    span.custom-option(data-value='35') 35
                                     span.custom-option(data-value='40') 40
-                                    span.custom-option(data-value='45') 45
+                                    span.custom-option.selected(data-value='45') 45
 
                     .form__row.mb-mobile
                         .cutom-select__label Country
@@ -103,8 +110,8 @@ section.section-choose
                                         span Female
                                         .arrow
                                     .custom-options
-                                        span.custom-option.selected(data-value='Male') Male
-                                        span.custom-option(data-value='Female') Female
+                                        span.custom-option(data-value='Male') Male
+                                        span.custom-option.selected(data-value='Female') Female
 
                         .form__row
                             .cutom-select__label Looking for:
@@ -117,7 +124,7 @@ section.section-choose
                                         span.custom-option.selected(data-value='Male') Male
                                         span.custom-option(data-value='Female') Female
 
-                        .form-row__column    
+                        .form-row__column
                             .other-label E-mail:
 
                             input.input(type="email", placeholder="usermail@gmail.com")
@@ -131,7 +138,7 @@ section.section-choose
                                         span 35
                                         .arrow
                                     .custom-options
-                                        span.custom-option.selected(data-value='25') 25
+                                        span.custom-option(data-value='25') 25
                                         span.custom-option(data-value='30') 30
                                         span.custom-option.selected(data-value='35') 35
                                         span.custom-option(data-value='40') 40
@@ -143,11 +150,11 @@ section.section-choose
                                         span 45
                                         .arrow
                                     .custom-options
-                                        span.custom-option.selected(data-value='25') 25
+                                        span.custom-option(data-value='25') 25
                                         span.custom-option(data-value='30') 30
-                                        span.custom-option.selected(data-value='35') 35
+                                        span.custom-option(data-value='35') 35
                                         span.custom-option(data-value='40') 40
-                                        span.custom-option(data-value='45') 45
+                                        span.custom-option.selected(data-value='45') 45
 
                         .form__row
                             .cutom-select__label Country

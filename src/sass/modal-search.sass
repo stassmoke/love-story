@@ -1,0 +1,256 @@
+.modal-search
+  position: -webkit-sticky
+	position: sticky
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  min-height: 100vh
+  height: 100%
+  z-index: 10
+  background: linear-gradient(to bottom, #36102f 0%, #8d3771 100%)
+  display: flex
+  align-items: center
+  padding: 7rem 0
+  overflow-y: auto
+  transform: translateY(120%)
+  transition: transform .3s ease
+  -webkit-overflow-scrolling: touch
+  &.__open
+    transition: transform .3s ease
+
+    .close-nav
+      display: block
+      position: absolute
+      right: 2rem
+      top: 7rem
+      width: 2.5rem
+      fill: $orange
+      cursor: pointer
+
+      @media screen and ( max-width: 500px )
+        top: 3rem
+
+
+
+  @media screen and ( max-width: 1024px )
+    padding: 7rem 0 10rem 0
+
+  .container
+    height: 100%
+
+  &__wrap
+    display: flex
+    width: 100%
+    height: 100%
+
+    @media screen and ( max-width: 1024px )
+      flex-direction: column-reverse
+      
+
+    &--left,
+    &--right
+      flex: 1 1 50%
+      max-width: 50%
+
+      @media screen and ( max-width: 1024px )
+        flex: 1 1 100%
+        max-width: 100%
+
+
+
+    &--left
+      display: flex
+      justify-content: space-between
+
+      @media screen and ( max-width: 1024px )
+        width: 75%
+        margin: 0 auto
+
+      @media screen and ( max-width: 670px )
+        width: 100%
+
+      @media screen and ( max-width: 500px )
+        flex-direction: column
+      
+
+    &--right
+      padding: 0 4rem 0 8rem
+
+      @media screen and ( max-width: 1024px )
+        padding: 0
+        text-align: center
+
+      
+
+  &__content--left,
+  &__content--right
+    flex: 1 1 46%
+    max-width: 46%
+
+    @media screen and ( max-width: 500px )
+      max-width: 100%
+      flex: 1 1 100%
+
+  &__content--right
+    @media screen and ( max-width: 500px )
+      padding-bottom: 10rem
+
+  &__row
+    display: flex
+    width: 100%
+    align-items: center
+    margin-bottom: 2rem
+
+    &.__range
+      margin-top: 6.8rem
+
+    &.__column
+      flex-direction: column
+      align-items: flex-start
+
+      &:last-of-type
+        .custom-options
+          @media screen and (max-width: 1240px)
+              bottom: 100%
+              top: auto
+
+              &:last-of-type
+                  border-radius: 5px 5px 0 0 
+
+      .modal-search__label,
+      .modal-search__select--wrapper
+        width: 100%
+
+      .modal-search__label
+        margin-bottom: 1.5rem
+        user-select: none
+
+
+
+  &__custom--select
+    width: 100%
+
+  &__select--wrapper,
+  &__label
+    width: 50%
+    max-width: 100%
+
+  &__select--wrapper
+
+    @media screen and ( max-width: 500px )
+      width: 75%
+  
+
+  &__label
+    font-size: 1.8rem
+    font-weight: 700
+    user-select: none
+  
+  &__title
+    font-size: 6.5rem
+    
+    margin-bottom: 4.5rem
+
+    &--fb
+      font-weight: 900
+      margin-right: 1.8rem
+
+    &--fl
+      margin-right: 1.8rem
+
+  &__description
+    font-size: 2.5rem
+    color: $orange
+    font-weight: 700
+    display: flex
+    flex-direction: column
+    @media screen and ( max-width: 1024px )
+      margin-bottom: 3rem
+
+
+    &::after
+      content: ''
+      width: 11.5rem
+      height: 2px
+      background-color: $orange
+      display: inline-block
+      margin-top: 2rem
+
+      @media screen and ( max-width: 1024px )
+        display: block
+        margin: 0 auto
+        margin-top: 2rem
+
+      
+  .btn-search
+    padding: 1.8rem 3rem
+    width: 100%
+    margin-top: 2.5rem
+    span
+      font-size: 2.4rem 
+      font-weight: 700
+
+  &__noUiSlider
+    width: 75%
+
+
+    
+
+  .noUi
+
+    &-target
+      background-color: #4c1a52
+      border-style: none
+      border-radius: 50px
+      box-shadow: inset 0px -2px 2px -2px #F0F0F0, inset 0px 0px 2px 1px #0000009e
+      height: 1.4rem
+    
+    &-tooltip
+      display: none
+      font-size: 1.8rem
+      padding: .5rem 1rem 
+      border-radius: 50px
+      border: none
+      font-weight: 700
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.33)
+
+
+    &-active
+      .noUi-tooltip
+        display: block
+    
+    &-handle
+      
+      &:hover
+        cursor: grab
+        .noUi-tooltip
+          display: block
+    &-connect
+      background-color: #fff
+
+    &-base
+      padding: 2px 0  
+
+    &-horizontal
+      .noUi-handle
+        border-radius: 50%
+        width: 2.2rem 
+        height: 2.2rem
+        box-shadow: none
+        top: -0.4rem
+        outline: none
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.33)
+
+        &::after
+          width: 1.1rem
+          height: 1.1rem
+          background-color: #4c1a52
+          border-radius: 50%
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+
+        &::before
+          content: none

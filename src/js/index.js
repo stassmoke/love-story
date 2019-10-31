@@ -1,7 +1,46 @@
-
-import slider from './slider';
-
 "use strict";
+
+import slider from "../js/slider"
+
+// RANGE SLIDER //
+
+var noUiSliderAge = document.getElementById('noUiSliderAge');
+
+noUiSlider.create(noUiSliderAge, {
+    start: [25, 80],
+    connect: true,
+    tooltips: true,
+    range: {
+        'min': [18],
+        'max': [100]
+    }
+});
+
+var noUiSliderWeight = document.getElementById('noUiSliderWeight');
+
+noUiSlider.create(noUiSliderWeight, {
+    start: [60, 90],
+    connect: true,
+    tooltips: true,
+    range: {
+        'min': [50],
+        'max': [250]
+    }
+});
+
+var noUiSliderHeight = document.getElementById('noUiSliderHeight');
+
+noUiSlider.create(noUiSliderHeight, {
+    start: [150, 180],
+    connect: true,
+    tooltips: true,
+    range: {
+        'min': [120],
+        'max': [300]
+    }
+});
+
+// RANGE SLIDER //
 
 // CUSTOM SELECT //
 
@@ -23,13 +62,6 @@ for (const option of document.querySelectorAll(".custom-option")) {
   });
 }
 
-// window.addEventListener('click', function (e) {
-//     const select = document.querySelector('.custom-select')
-//     if (!select.contains(e.target)) {
-//         select.classList.remove('open');
-//     }
-// });
-
 window.addEventListener("click", function(e) {
   for (const select of document.querySelectorAll(".custom-select")) {
     if (!select.contains(e.target)) {
@@ -48,18 +80,47 @@ const navMenu = document.getElementById("navigation-wrap__mobile");
 
 const close = document.getElementById("close-nav");
 
+// const body = document.getElementsByTagName("body")
+
 btnBurger.addEventListener("click", function() {
   navMenu.classList.add("__open");
+  // document.body.style.pointerEvents = "none"
 });
 
 close.addEventListener("click", function() {
   navMenu.classList.remove("__open");
+  // document.body.style.pointerEvents = "all"
+
 });
 
-console.log(btnBurger, navMenu)
-
 // NAVIGATION END //
+
+// SEARCH MODAL //
+
+const btnSearch = document.getElementById("btn-search")
+
+const modalSearch = document.getElementById("modal-search")
+
+const closeSearch = document.getElementById("close-search");
+
+console.log(btnSearch, modalSearch, closeSearch)
+
+btnSearch.addEventListener("click", function() {
+  modalSearch.classList.add("__open");
+  // document.body.style.pointerEvents = "none"
+});
+
+closeSearch.addEventListener("click", function() {
+  modalSearch.classList.remove("__open");
+  // document.body.style.pointerEvents = "all"
+
+});
+// SEARCH MODAL END //
+
+
+
 
 
 
 slider();
+
